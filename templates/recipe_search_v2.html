@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy 9 cooking - レシピ検索</title>
+    <link rel="stylesheet" href="/static/style_v2.css">
+</head>
+<body>
+
+    <!-- ヘッダーエリア -->
+    <header class="app-header">
+        <div class="header-container">
+            <h1 class="brand-logo">happy 9 cooking</h1>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- 食材カテゴリバー -->
+        <section class="category-section">
+            <div class="category-bar" id="categoryBar">
+                <!-- JSで動的生成されます -->
+            </div>
+        </section>
+
+        <!-- 改良点：選択中の食材トレイ（カテゴリ切り替え時にも選択状態を維持・可視化） -->
+        <section class="tray-section">
+            <div class="selected-tray" id="selectedTray">
+                <span class="tray-label">選択中の食材：</span>
+                <div class="tray-chips" id="trayChips">
+                    <span class="empty-msg">食材を選択してください</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 食材リストエリア -->
+        <section class="ingredients-section">
+            <h2 class="section-title">食材を選ぶ</h2>
+            <div class="ingredient-grid" id="ingredientGrid">
+                <!-- JSで動的生成されます -->
+            </div>
+        </section>
+
+        <!-- レシピリストエリア -->
+        <section class="recipes-section">
+            <h2 class="section-title">作れるレシピ</h2>
+            <div class="recipe-grid" id="recipeGrid">
+                <!-- JSで動的生成されます -->
+            </div>
+        </section>
+
+        <!-- レシピ情報エリア（詳細） -->
+        <section class="detail-section">
+            <div class="recipe-detail-box" id="recipeDetail">
+                <p class="empty-detail-msg">上記からレシピを選択すると、ここに詳細な作り方が表示されます。</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script_v2.js" defer></script>
+</body>
+</html>
